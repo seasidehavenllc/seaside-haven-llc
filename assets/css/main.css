@@ -37,6 +37,13 @@ body {
 	line-height: 1;
 }
 
+.brand-logo {
+    width: 70px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 .brand-title {
     font-family: 'Inter', sans-serif;
     font-weight: 800;
@@ -1374,18 +1381,20 @@ input, select, textarea {
 			#header > :first-child:before {
 				display: none;
 			}
-
 		#header .logo {
 			width: 5.5rem;
 			height: 5.5rem;
-			line-height: 5.5rem;
 			border: solid 1px #ffffff;
 			border-radius: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 
-			#header .logo .icon:before {
-				font-size: 2rem;
-			}
+		.brand-logo {
+			width: 60%;
+			height: auto;
+		}
 
 		#header .content {
 			border-style: solid;
