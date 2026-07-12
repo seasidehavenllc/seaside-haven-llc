@@ -34,12 +34,18 @@ body {
 }
 
 .service-bubble {
-  background: rgba(255,255,255,0.05);
+  background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.15);
   padding: 20px;
   border-radius: 15px;
   margin-bottom: 20px;
-  backdrop-filter: blur(6px);
+  transition: 0.2s;
+}
+
+a .service-bubble:hover {
+  background: rgba(255,255,255,0.15);
+  transform: scale(1.02);
+  cursor: pointer;
 }
 
 ol, ul {
