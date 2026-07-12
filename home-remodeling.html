@@ -6,42 +6,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <style>
+        /* Section bubble cards */
+        .info-bubble {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            backdrop-filter: blur(6px);
+        }
+
+        /* Photo grid */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .photo-grid img {
+            width: 100%;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+
+        /* Icon headers */
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .section-title i {
+            font-size: 1.3em;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body class="is-preload">
 
     <div id="wrapper">
 
-        <!-- Home Remodeling Panel -->
         <section class="panel">
             <div class="inner">
+
                 <h2 class="major">Home Remodeling</h2>
                 <span class="image main"><img src="images/pic01.jpg" alt="" /></span>
 
-                <p>Seaside Haven LLC provides dependable, high‑quality home remodeling services throughout the Lynchburg and Roanoke area. Whether you’re upgrading a single room or transforming your entire home, we deliver practical, affordable, and professional results.</p>
+                <!-- Intro Bubble -->
+                <div class="info-bubble">
+                    <div class="section-title">
+                        <i class="fas fa-tools"></i> About Our Remodeling
+                    </div>
+                    <p>
+                        Seaside Haven LLC delivers clean, reliable, and modern home remodeling services across the Lynchburg and Roanoke region.
+                        Whether you’re refreshing a single room or transforming your entire home, we focus on quality, communication, and long‑lasting results.
+                    </p>
+                </div>
 
-                <h3>Our Remodeling Services</h3>
-                <ul>
-                    <li>Kitchen remodeling and upgrades</li>
-                    <li>Bathroom renovations and modernizations</li>
-                    <li>Living room, bedroom, and interior redesigns</li>
-                    <li>Flooring installation (hardwood, vinyl, tile, carpet)</li>
-                    <li>Drywall, painting, trim, and finishing work</li>
-                    <li>Decks, porches, siding, and exterior improvements</li>
-                    <li>Full home renovation and restoration</li>
-                </ul>
+                <!-- Services Bubble -->
+                <div class="info-bubble">
+                    <div class="section-title">
+                        <i class="fas fa-home"></i> What We Specialize In
+                    </div>
+                    <ul>
+                        <li><strong>Kitchens:</strong> Cabinets, counters, layouts, lighting, appliances.</li>
+                        <li><strong>Bathrooms:</strong> Tile, showers, vanities, fixtures, full redesigns.</li>
+                        <li><strong>Interiors:</strong> Living rooms, bedrooms, basements, offices.</li>
+                        <li><strong>Flooring:</strong> Hardwood, vinyl plank, tile, carpet.</li>
+                        <li><strong>Walls & Finish:</strong> Drywall, painting, trim, accent walls.</li>
+                        <li><strong>Exterior:</strong> Decks, porches, siding, entryways.</li>
+                        <li><strong>Full Renovations:</strong> Complete home transformations.</li>
+                    </ul>
+                </div>
 
-                <h3>Why Homeowners Choose Us</h3>
-                <p>We focus on honest pricing, dependable work, and long‑term quality. Every project is handled with care, communication, and attention to detail. Your home is an investment — and we treat it like one.</p>
+                <!-- Process Bubble -->
+                <div class="info-bubble">
+                    <div class="section-title">
+                        <i class="fas fa-clipboard-check"></i> Our Process
+                    </div>
+                    <ul>
+                        <li><strong>Consultation:</strong> Walkthrough + project goals.</li>
+                        <li><strong>Planning:</strong> Materials, layout, timeline.</li>
+                        <li><strong>Construction:</strong> Clean, efficient, respectful work.</li>
+                        <li><strong>Final Review:</strong> Walkthrough + adjustments.</li>
+                    </ul>
+                </div>
 
-                <h3>Service Area</h3>
-                <p>Lynchburg, Roanoke, Bedford, Smith Mountain Lake, and surrounding communities.</p>
+                <!-- Photo Grid -->
+                <div class="info-bubble">
+                    <div class="section-title">
+                        <i class="fas fa-images"></i> Recent Project Photos
+                    </div>
 
-                <h3>Contact Us</h3>
-                <p><strong>Email:</strong> kodykaylyn@gmail.com<br>
-                <strong>Phone:</strong> 434‑439‑0273</p>
+                    <div class="photo-grid">
+                        <img src="images/pic02.jpg" alt="">
+                        <img src="images/pic03.jpg" alt="">
+                        <img src="images/pic04.jpg" alt="">
+                        <img src="images/pic05.jpg" alt="">
+                    </div>
+
+                    <p>More project photos coming soon as we continue expanding our remodeling portfolio.</p>
+                </div>
+
+                <!-- Trust Bubble -->
+                <div class="info-bubble">
+                    <div class="section-title">
+                        <i class="fas fa-check-circle"></i> Why Homeowners Choose Us
+                    </div>
+                    <ul>
+                        <li>Clear, upfront pricing</li>
+                        <li>Reliable scheduling</li>
+                        <li>Quality materials</li>
+                        <li>Local, family‑owned business</li>
+                        <li>Clean and respectful work</li>
+                    </ul>
+                </div>
+
+                <!-- Contact Bubble -->
+                <div class="info-bubble">
+                    <div class="section-title">
+                        <i class="fas fa-phone-alt"></i> Get a Remodeling Quote
+                    </div>
+                    <p>
+                        Ready to upgrade your home? Contact us anytime — we respond quickly and can schedule a walkthrough within 24–48 hours.
+                    </p>
+                    <p>
+                        <strong>Email:</strong> kodykaylyn@gmail.com<br>
+                        <strong>Phone:</strong> 434‑439‑0273
+                    </p>
+                </div>
 
                 <a href="index.html" class="button primary">Back to Home</a>
+
             </div>
         </section>
 
