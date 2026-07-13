@@ -200,7 +200,7 @@
 									</div>
 
 									<!-- Hidden settings -->
-									<input type="hidden" name="_captcha" value="false"> <!-- No annoying CAPTCHA -->
+									<input type="hidden" name="_captcha" value="false">
 									<input type="hidden" name="_subject" value="New Quote Request from Seaside Haven LLC Website">
 									<input type="hidden" name="_template" value="table">
 
@@ -209,6 +209,10 @@
 
 									<!-- Spam Protection -->
 									<input type="text" name="_honey" style="display:none"> <!-- Bot trap -->
+
+
+									<!-- Redirect to Thank You Popup -->
+									<input type="hidden" name="_next" value="https://seasidehavenllc.github.io/index.html#thankyou"> 
 
 									<ul class="actions">
 										<li><input type="submit" value="Send Message" class="primary" /></li>
@@ -223,6 +227,42 @@
 									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
 							</article>
+
+							<div id="thankyou-modal" style="
+								display:none;
+								position:fixed;
+								top:0; left:0;
+								width:100%; height:100%;
+								background:rgba(0,0,0,0.7);
+								backdrop-filter:blur(4px);
+								z-index:9999;
+							">
+								<div style="
+									background:#111;
+									padding:30px;
+									border-radius:15px;
+									width:300px;
+									margin:150px auto;
+									text-align:center;
+									position:relative;
+								">
+									<h3>Thank You!</h3>
+									<p>We will be in contact shortly.</p>
+
+									<button onclick="document.getElementById('thankyou-modal').style.display='none'"
+										style="
+											position:absolute;
+											top:10px; right:10px;
+											background:none;
+											border:none;
+											color:white;
+											font-size:20px;
+											cursor:pointer;
+										">
+										×
+									</button>
+								</div>
+							</div>
 
 						<!-- Elements -->
 							<article id="elements">
@@ -484,6 +524,11 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				if (window.location.hash === "#thankyou") {
+					document.getElementById("thankyou-modal").style.display = "block";
+				}
+			</script>
 
 	</body>
 </html>
