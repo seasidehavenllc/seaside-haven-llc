@@ -220,7 +220,6 @@
 							<article id="contact">
 								<h2 class="major">Get Quote</h2>
 
-								<!-- Working Email Form with Auto-Reply, Spam Protection, Phone, and Service Dropdown -->
 								<form method="POST" action="https://formsubmit.co/kodykaylyn@gmail.com">
 									<div class="fields">
 
@@ -269,11 +268,7 @@
 									<input type="hidden" name="_autoresponse" value="Thank you for contacting Seaside Haven LLC! We have received your quote request and will reach out shortly.">
 
 									<!-- Spam Protection -->
-									<input type="text" name="_honey" style="display:none"> <!-- Bot trap -->
-
-
-									<!-- Redirect to Thank You Popup -->
-									<input type="hidden" name="_next" value="https://seasidehavenllc.github.io/seaside-haven-llc/index.html#thankyou"> 
+									<input type="text" name="_honey" style="display:none">
 
 									<ul class="actions">
 										<li><input type="submit" value="Send Message" class="primary" /></li>
@@ -289,6 +284,7 @@
 								</ul>
 							</article>
 
+							<!-- Popup Modal -->
 							<div id="thankyou-modal" style="
 								display:none;
 								position:fixed;
@@ -324,7 +320,7 @@
 									</button>
 								</div>
 							</div>
-					</div>
+						</div>
 
 				<!-- Footer -->
 					<footer id="footer">
@@ -343,10 +339,10 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script>
-				if (window.location.hash === "#thankyou") {
-					document.getElementById("thankyou-modal").style.display = "block";
-				}
-			</script>
+				document.querySelector('#contact form').addEventListener('submit', function(e) {
+					document.getElementById('thankyou-modal').style.display = 'block';
+				});
+				</script>
 
 	</body>
 </html>
