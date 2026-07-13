@@ -218,7 +218,30 @@ input, select, textarea {
 
 		}
 
-		/* Fix mobile layout so cards aren't squeezed */
+
+		/* FULL DESKTOP WIDTH FIX */
+		@media screen and (min-width: 980px) {
+			article {
+				max-width: 1200px !important;
+				margin: 0 auto;
+				padding: 0 40px;
+			}
+
+			.card-box {
+				max-width: 100% !important;
+				width: 100%;
+				margin-left: 0;
+				margin-right: 0;
+			}
+
+			.image.main img {
+				width: 100%;
+				height: auto;
+				border-radius: 14px;
+			}
+		}
+
+		/* MOBILE FIX — prevent center squeeze */
 		@media screen and (max-width: 736px) {
 			.card-box {
 				width: 100%;
@@ -236,6 +259,12 @@ input, select, textarea {
 				width: 100%;
 				height: auto;
 				border-radius: 12px;
+			}
+
+			.card-box h3,
+			.card-box p,
+			.card-box ul {
+				text-align: left;
 			}
 		}
 
