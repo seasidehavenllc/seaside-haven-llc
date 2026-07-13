@@ -44,33 +44,40 @@
 
 						<!-- Intro -->
 							<article id="intro">
-								<h2 class="major">Welcome to Seaside Haven LLC</h2>
+								<h2 class="major">Seaside Haven LLC</h2>
 								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
 
 								<div class="info-bubble">
-									<h3>Building Homes, Businesses, and Community</h3>
+									<h3>Family-Owned. Community-Focused.</h3>
 									<p>
-										Seaside Haven LLC is a family‑owned, multi‑service company serving the Lynchburg and Roanoke region. 
-										We focus on practical, high‑quality solutions that make life easier — whether it’s improving your home, 
-										maintaining your property, managing rentals, or expanding into new service lines like vending and live commerce.
+										Seaside Haven LLC is a growing, family‑owned multi‑service company serving the Lynchburg and Roanoke area. 
+										We’re built on honest work, reliable service, and a commitment to helping families and businesses improve 
+										their spaces, streamline their operations, and plan for the future.
 									</p>
 								</div>
 
 								<div class="info-bubble">
-									<h3>What We Stand For</h3>
+									<h3>What We Do</h3>
 									<ul>
-										<li><strong>Honest Work:</strong> Straightforward pricing and clear communication.</li>
-										<li><strong>Reliable Service:</strong> We show up, follow through, and finish strong.</li>
-										<li><strong>Community Focus:</strong> Local business supporting local families.</li>
-										<li><strong>Growth Mindset:</strong> Always expanding into new services to meet real needs.</li>
+										<li><strong>Home Remodeling:</strong> Kitchens, baths, interiors, flooring, and full renovations.</li>
+										<li><strong>Landscaping:</strong> Lawn care, trimming, mulch, cleanup, and outdoor upgrades.</li>
+										<li><strong>Property Management:</strong> Rentals, inspections, maintenance, and tenant support.</li>
+										<li><strong>Business Expansion:</strong> Vending machines, live commerce, laundromat development, and future Airbnb setups.</li>
 									</ul>
+								</div>
+
+								<div class="info-bubble">
+									<h3>Our Approach</h3>
+									<p>
+										We focus on clear communication, dependable scheduling, and quality work that lasts. Whether it’s a home 
+										project or a business venture, we treat every job like it’s our own.
+									</p>
 								</div>
 
 								<div class="info-bubble">
 									<h3>Explore Our Services</h3>
 									<p>
-										From remodeling and landscaping to rental management, vending machines, laundromat development, 
-										and future Airbnb setups — Seaside Haven LLC is built to grow with you.
+										Seaside Haven LLC continues expanding into new service lines to meet real needs in our community.
 									</p>
 									<a href="#work" class="button primary">View Our Services</a>
 								</div>
@@ -289,20 +296,32 @@
 								position:fixed;
 								top:0; left:0;
 								width:100%; height:100%;
-								background:rgba(0,0,0,0.7);
-								backdrop-filter:blur(4px);
+								background:rgba(0,0,0,0.65);
+								backdrop-filter:blur(6px);
 								z-index:9999;
+								animation: fadeIn 0.3s ease;
 							">
 								<div style="
-									background:#111;
-									padding:30px;
-									border-radius:15px;
-									width:300px;
+									background:rgba(255,255,255,0.08);
+									border:1px solid rgba(255,255,255,0.15);
+									padding:35px;
+									border-radius:20px;
+									width:320px;
 									margin:150px auto;
 									text-align:center;
 									position:relative;
+									animation: popIn 0.25s ease;
 								">
-									<h3>Thank You!</h3>
+									<div style="
+										font-size:50px;
+										color:#4CAF50;
+										margin-bottom:10px;
+										animation: checkPop 0.4s ease;
+									">
+										✔
+									</div>
+
+									<h3 style="margin-bottom:10px;">Thank You!</h3>
 									<p>We will be in contact shortly.</p>
 
 									<button onclick="document.getElementById('thankyou-modal').style.display='none'"
@@ -312,14 +331,36 @@
 											background:none;
 											border:none;
 											color:white;
-											font-size:20px;
+											font-size:22px;
 											cursor:pointer;
 										">
 										×
 									</button>
 								</div>
 							</div>
+
+							<!-- Popup Animations -->
+							<style>
+							@keyframes fadeIn {
+								from { opacity:0; }
+								to { opacity:1; }
+							}
+							@keyframes popIn {
+								from { transform:scale(0.8); opacity:0; }
+								to { transform:scale(1); opacity:1; }
+							}
+							@keyframes checkPop {
+								from { transform:scale(0); }
+								to { transform:scale(1); }
+							}
+							</style>
+
+							<!-- Popup Sound -->
+							<audio id="ding-sound">
+								<source src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" type="audio/ogg">
+							</audio>
 						</div>
+						
 
 				<!-- Footer -->
 					<footer id="footer">
