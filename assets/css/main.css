@@ -218,6 +218,27 @@ input, select, textarea {
 
 		}
 
+		/* Fix mobile layout so cards aren't squeezed */
+		@media screen and (max-width: 736px) {
+			.card-box {
+				width: 100%;
+				margin-left: 0;
+				margin-right: 0;
+				padding: 25px;
+				border-radius: 14px;
+			}
+
+			article {
+				padding: 0 10px !important;
+			}
+
+			.image.main img {
+				width: 100%;
+				height: auto;
+				border-radius: 12px;
+			}
+		}
+
 		@media screen and (max-width: 360px) {
 
 			html {
