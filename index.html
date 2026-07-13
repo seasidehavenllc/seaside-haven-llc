@@ -158,26 +158,64 @@
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Get Quote</h2>
-								<form method="post" action="#">
+
+								<!-- Working Email Form with Auto-Reply, Spam Protection, Phone, and Service Dropdown -->
+								<form method="POST" action="https://formsubmit.co/kodykaylyn@gmail.com">
 									<div class="fields">
+
 										<div class="field half">
 											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
+											<input type="text" name="name" id="name" required />
 										</div>
+
 										<div class="field half">
 											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
+											<input type="email" name="email" id="email" required />
 										</div>
+
+										<div class="field half">
+											<label for="phone">Phone Number</label>
+											<input type="tel" name="phone" id="phone" required />
+										</div>
+
+										<div class="field half">
+											<label for="service">Service Needed</label>
+											<select name="service" id="service" required>
+												<option value="">Select a Service</option>
+												<option value="Home Remodeling">Home Remodeling</option>
+												<option value="Landscaping">Landscaping</option>
+												<option value="Rental Property">Rental Property</option>
+												<option value="House Flipping">House Flipping</option>
+												<option value="Live Commerce">Live Commerce</option>
+												<option value="Vending Machines">Vending Machines</option>
+												<option value="Laundromat">Laundromat</option>
+												<option value="Airbnb">Airbnb</option>
+											</select>
+										</div>
+
 										<div class="field">
 											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
+											<textarea name="message" id="message" rows="4" required></textarea>
 										</div>
 									</div>
+
+									<!-- Hidden settings -->
+									<input type="hidden" name="_captcha" value="false"> <!-- No annoying CAPTCHA -->
+									<input type="hidden" name="_subject" value="New Quote Request from Seaside Haven LLC Website">
+									<input type="hidden" name="_template" value="table">
+
+									<!-- Auto Reply -->
+									<input type="hidden" name="_autoresponse" value="Thank you for contacting Seaside Haven LLC! We have received your quote request and will reach out shortly.">
+
+									<!-- Spam Protection -->
+									<input type="text" name="_honey" style="display:none"> <!-- Bot trap -->
+
 									<ul class="actions">
 										<li><input type="submit" value="Send Message" class="primary" /></li>
 										<li><input type="reset" value="Reset" /></li>
 									</ul>
 								</form>
+
 								<ul class="icons">
 									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
